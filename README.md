@@ -4,10 +4,23 @@ Evaluating the performance of two TCP variants: TCP Vegas and TCP new Reno in a 
 Our goal is to compare which TCP variant is best fit in a SANET (Static Ad hoc Network) environment. 
 One of the effective indicators we can use to compare is the Packet Loss Ration (PLR).
 
-## Tools:
-- NS2 (v2.35) Network Simulator
-- NAM (v1.14) Network Animator
-- AWK Programming Language
+## Tools & installation:
+### Linux environment
+### NS2 (v2.35) Network Simulator
+Update the package manager apt-get, install basic build tools and prerequisites, then install ns2 using apt-get
+```shell
+sudo apt-get update
+sudo apt-get install build-essential autoconf automake libxmu-dev
+sudo apt-get install ns2
+```
+### NAM (v1.14) Network Animator
+1. Download the nam 1.14 package from this link: https://drive.google.com/file/d/1dkNPNN23Vy6o_zT0uIRBgUAo1VCXcVOY/view
+2. find its location on your machine and on the same directory:
+```
+sudo dpkg --install nam_1.14_amd64.deb
+``` 
+### AWK Programming Language
+It is usually pre installed on Linux machines
 
 ## Steps:
 1.  Simulate the SANET network using the TCP Vegas variant. In order to do so, we execute the TCL file using ns:

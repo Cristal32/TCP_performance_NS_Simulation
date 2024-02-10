@@ -22,6 +22,20 @@ sudo dpkg --install nam_1.14_amd64.deb
 ### AWK Programming Language
 It is usually pre installed on Linux machines
 
+### gnuplot
+A tool for generating graphs:
+```shell
+sudo apt-get update
+sudo apt-get install gnuplot
+```
+
+### eog
+For viewing images:
+```shell
+sudo apt-get update
+sudo apt-get install eog
+```
+
 ## Steps:
 1.  Simulate the SANET network using the TCP Vegas variant. In order to do so, we execute the TCL file using ns:
 ```shell
@@ -44,3 +58,12 @@ awk -f loss_rate.awk sanet_reno.tr >> plr_results_reno.txt
 ```
 This way, we can transfer the resulted PLR values in text files, that we can use to visualise the PLR curve for the two TCP variants and determine which 
 one results in the least packet loss.
+
+4. use gnuplot on the file: plr_curve.gp which reads data from the generated text files and creates the corresponding graph:
+```shell
+gnuplot plr_curve.gp
+```
+This will create the graph in a png format, all we have to do then is open the file:
+```shell
+eog plr.png
+```

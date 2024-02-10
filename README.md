@@ -1,8 +1,8 @@
 # TCP_performance_NS_Simulation
-Evaluating the performance of two TCP variants: TCP Vegas and TCP new Reno in a simulated SANET network
+Evaluating the performance of two TCP variants: TCP Vegas and TCP new Reno in a simulated SANET network.
 
 Our goal is to compare which TCP variant is best fit in a SANET (Static Ad hoc Network) environment. 
-One of the effective indicators we an use to compare is the Packet Loss Ration (PLR).
+One of the effective indicators we can use to compare is the Packet Loss Ration (PLR).
 
 ## Tools:
 - NS2 (v2.35) Network Simulator
@@ -29,4 +29,5 @@ This will also generate 2 files: sanet_reno.nam and sanet_reno.tr.
 awk -f loss_rate.awk sanet_vegas.tr >> plr_results_vegas.txt
 awk -f loss_rate.awk sanet_reno.tr >> plr_results_reno.txt
 ```
-This way, we can transfer the resulted PLR values in text files, that we can use to visualise the graph.
+This way, we can transfer the resulted PLR values in text files, that we can use to visualise the PLR curve for the two TCP variants and determine which 
+one results in the least packet loss.
